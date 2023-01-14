@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.special-heading {
+  text-align: center;
+  margin: 25px 0;
+}
+.special-heading p {
+  display: inline;
+  position: relative;
+}
+.special-heading p::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: crimson;
+  right: -60%;
+  bottom: 50%;
+}
+.special-heading p::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: crimson;
+  left: -60%;
+  bottom: 50%;
+}
+/*                                             header                                */
+.hero {
+  min-height: 100vh;
+  background-image: url("../images/background\ 2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero header .logo {
+  color: #fff;
+}
+.hero header .logo span {
+  color: crimson;
+}
+.hero header .burger-icon {
+  cursor: pointer;
+  width: 25px;
+  color: #fff;
+}
+.hero {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .hero header .links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.874);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .hero header .links li {
+    margin: 20px;
+  }
+  #x-mark {
+    color: #fff;
+    background-color: crimson;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    align-self: end;
+  }
+}
+.hero header .links li a {
+  display: block;
+  color: #fff;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.hero header .links li a:hover {
+  color: crimson;
+}
+
+.hero .text {
+  color: #fff;
+}
+.hero .landing .text p {
+  font-size: 20px;
+}
+.hero .text p span {
+  font-size: 30px;
+  color: crimson;
+  border-right: 2px solid rgba(220, 20, 60, 0);
+  animation: opacity 0.5s ease;
+  -webkit-animation: opacity 1s infinite;
+}
+@keyframes opacity {
+  0% {
+    border-right: 2px solid rgba(220, 20, 60, 0.057);
+  }
+  50% {
+    border-right: 2px solid rgba(220, 20, 60, 0.733);
+  }
+  100% {
+    border-right: 2px solid rgb(220, 20, 60);
+  }
+}
+.hero .landing .text button {
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+.hero .landing .text button:hover {
+  background-color: transparent;
+  color: crimson;
+}
+ @media (min-width:992px) {
+  .hero .landing .my-img {
+    width: 50%;
+  }
+ }
+ 
+/*                                             about                                */
+
+.about .content .text span {
+  color: crimson;
+}
+.about .content .text p {
+  word-wrap: break-word;
+}
+.about .content .text button a {
+  color:#fff
+}
+
+/*                                             skills                                */
+.skills {
+  background-color: rgb(10, 9, 9);
+  position: relative;
+  color: #fff;
+}
+
+.skills .slider-controls i {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  color: crimson;
+  cursor: pointer;
+  text-align: center;
+}
+
+.skills .slider-controls i.disabled {
+  cursor: no-drop;
+  color: rgba(220, 20, 60, 0.313);
+}
+.skills .myskills {
+  position: relative;
+  border: 5px solid crimson;
+  max-width: 200px;
+  height: 200px;
+}
+.skills .myskills img {
+  width: 60%;
+  position: absolute;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  opacity: 0;
+}
+.skills .myskills img.active {
+  opacity: 1;
+}
+/*                                             portfolio                                */
+.portfolio .projects .card {
+  position: relative;
+  background-color: rgba(10, 9, 9, 0.95);
+  color: #fff;
+  
+}
+.portfolio .projects .card a {
+  display: inline-block;
+  margin-top: 10px;
+}
+.portfolio .projects .card img {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.portfolio .projects .card:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.portfolio .projects .card i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -15px;
+  top: -15px;
+  background-color: crimson;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+.portfolio .projects .card p {
+  background-color: crimson; 
+}
+/*                                      contact                              */
+.contact {
+  background-color: rgba(10, 9, 9, 0.988);
+  color: #fff;
+}
+.contact i {
+  font-size: 25px;
+  color: crimson;
+}
+.contact a {
+  color: #fff;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.contact a:hover {
+  color: crimson;
+}
+/*                                      footer                              */
+footer {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+footer .logo {
+  color: #fff;
+  text-align: center;
+}
+footer .logo span {
+  color: crimson;
+}
+footer p {
+  text-align: center;
+}
